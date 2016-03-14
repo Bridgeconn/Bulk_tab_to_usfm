@@ -15,7 +15,7 @@ Dir.glob("**/*.txt") do |file|
       count = count + 1
     end
   rescue Exception => e
-    puts "#{file} file is not with correct data"
+    puts "#{file} file is not complete OR has missing data"
   end
 
   directory_name = "output_folder"
