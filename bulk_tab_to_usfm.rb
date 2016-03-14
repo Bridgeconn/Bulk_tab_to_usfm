@@ -8,13 +8,14 @@ Dir.glob("**/*.txt") do |file|
   v = {}
   h = Hash.new { |hash, key| hash[key] = [] }
   count=0
-  CSV.foreach("#{file}", {:col_sep => "\t", :quote_char => "^"}) do |row|
-    h[:"#{row[1]}"] << row[2].to_s+" "+row[3]
-    if count == 1
-      row
+  begin
+    CSV.foreach("#{file}", {:col_sep => "\t", :quote_char => "^"}) do |row|
+      h[:"#{row[1]}"] << row[2].to_s+" "+row[3]
+      hash.store(row[0], h)
+      count = count + 1
     end
-    hash.store(row[0], h)
-    count = count + 1
+  rescue Exception => e
+    puts "#{file} file is not with correct data"
   end
 
   directory_name = "output_folder"
