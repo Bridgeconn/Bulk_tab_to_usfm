@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'csv'
-Dir.glob("**/*.txt") do |file|
+Dir.glob("**/*.csv") do |file|
   ch = []
   hash = {}
   c = {}
@@ -10,7 +10,7 @@ Dir.glob("**/*.txt") do |file|
   count=0
   begin
     CSV.foreach("#{file}", {:col_sep => "\t", :quote_char => "^"}) do |row|
-      h[:"#{row[1]}"] << row[2].to_s+" "+row[3]
+      h[:"#{row[1]}"] << row[2].to_s+" "+row[3].to_s
       hash.store(row[0], h)
       count = count + 1
     end
