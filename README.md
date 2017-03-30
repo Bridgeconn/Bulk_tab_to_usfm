@@ -1,13 +1,13 @@
-# Convert tab separated file(.csv) to usfm format.
+# Convert tab separated file(.tab) to usfm format.
 
-## Convert more than one file at one time
+## Can Convert more than one file at one time
 
-## Please follow the Instructions:
+## Please follow the Instructions/Convetions:
 
 1. First line of file (Heading) should not be blank.
-2. Two space or tab between verse number and verse text.
-3. All verse should be in single line (enter should not be present between sentences
-5. Output file will be created inside output_file folder with extension .usfm
+2. Two spaces or tabs between verse number and verse text.
+3. All verses should be in single line (carriage retunrs should not be present between sentences
+4. Output files will be created inside output_file folder with extension .usfm
 
 ## Make file executable with below command from console/ Terminal
 ```ruby
