@@ -1,4 +1,5 @@
 # Convert tab separated file(.tab) to usfm format.
+ Script is limited to  basic usfm tags   like \id,\c and \v. 
 
 ## Can Convert more than one file at one time
 
